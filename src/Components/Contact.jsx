@@ -1,20 +1,36 @@
 import React, { useState } from 'react';
+import './ContactForm.css'; // Import the CSS file for styling
 
 function Contact() {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+      name: '',
+      email: '',
+      message: '',
     });
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        
-        // Add your form submission logic here, such as sending the form data to a backend server
-        
-        console.log(formData); // For demonstration, log the form data to the console
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          console.log('Form submitted successfully!');
+        } else {
+          console.error('Failed to submit form:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error:', error.message);
+      }
     };
-
+  
+    
     const handleChange = (event) => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
@@ -24,10 +40,7 @@ function Contact() {
         <div className="contactPage">
             <h1>Contact Me</h1>
             <div className="contactInfo">
-                <h2>Contact Information</h2>
-                <p>Email: example@example.com</p>
-                <p>Phone: +1234567890</p>
-                {/* Add any other contact information here */}
+                <p>Email: catejb89@gmail.com</p>
             </div>
             <div className="contactForm">
                 <h2>Contact Form</h2>
