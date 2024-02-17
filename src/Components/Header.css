@@ -1,0 +1,27 @@
+/* Header.css */
+
+header {
+    background-color: #333; /* Set the background color of the header */
+    padding: 10px; /* Add some padding to the header */
+}
+
+.navbar {
+    display: flex; /* Use flexbox for the navbar layout */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+.nav-list {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for the list layout */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-item {
+    margin-right: 15px; /* Add spacing between navigation items */
+}
+
+.nav-item a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Set the text color to white */
+}
