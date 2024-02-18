@@ -11,6 +11,18 @@
     overflow: hidden;
 }
 
+.project-gallery .card {
+    background-color: #333333;
+    color: #fff;
+}
+
+
+.project-gallery .card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
 .project-gallery .img-container {
     flex: 1;
     overflow: hidden;

@@ -7,6 +7,7 @@
     display: grid; /* Add grid display */
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 20px; /* Adjust the gap between items */
+    text-align: left; /* Left-align the text */
 }
 
 .card:hover {
@@ -14,13 +15,24 @@
 }
 
 .card h2 {
-    font-size: 18px;
+    font-size: 20px; /* Reduce font size for project title */
     margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 10px; /* Reduce font size for project description */
     color: #555555;
+}
+
+.card a {
+    font-size: 16px; /* Reduce font size for links */
+    padding: 4px 8px; /* Reduce padding around links */
+    color: #646cff; /* Adjust link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.card a:hover {
+    color: #535bf2; /* Adjust link color on hover */
 }
 
 .img-container {

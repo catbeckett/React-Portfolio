@@ -1,7 +1,7 @@
-// server.js
-const express = require('express');
+import express from 'express'; // Use 'import' instead of 'require'
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000; // Define the port number
 
 app.use(express.json());
 

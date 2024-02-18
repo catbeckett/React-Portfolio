@@ -4,6 +4,7 @@ import "./Project.css";
 function Project({ projectData }) {
     return (
         <div className="card">
+            <h2>{projectData.title}</h2>
             <div className="img-container">
                 <img alt={projectData.title} src={projectData.image} />
             </div>

@@ -40,7 +40,12 @@ function Contact() {
         <div className="contactPage">
             <h1>Contact Me</h1>
             <div className="contactInfo">
-                <p>Email: catejb89@gmail.com</p>
+            <ul>
+                <li><a href="https://github.com/catbeckett">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/catherinebeckett11">LinkedIn Page</a></li>
+                <li>Email: catejb89@gmail.com</li>
+                <li><a href="https://drive.google.com/file/d/1U3m45sVzXdq--fsc7Q0hcDZH4u5fFWow/view?usp=drive_link">PDF version of my resume</a></li>
+            </ul>
             </div>
             <div className="contactForm">
                 <h2>Contact Form</h2>

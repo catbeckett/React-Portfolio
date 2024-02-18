@@ -16,3 +16,11 @@
 .contactForm form textarea {
     height: 150px;
 }
+
+.contactInfo ul {
+    list-style-position: inside; /* Align bullet points inside the list items */
+}
+
+.contactInfo li {
+    text-align: left; /* Left-align the text */
+}

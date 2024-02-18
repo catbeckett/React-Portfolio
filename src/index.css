@@ -2,9 +2,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size:25px; /* Increase the base font size here */
+
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(45, 43, 44, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -66,4 +68,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+body {
+  background-image: url('src/assets/2017JX5458.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
