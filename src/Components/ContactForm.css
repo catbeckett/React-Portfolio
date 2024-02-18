@@ -1,26 +1,39 @@
+/* Style for form labels */
 .contactForm form label {
     display: block;
     margin-bottom: 8px;
-}
-
-.contactForm form input,
-.contactForm form textarea {
+  }
+  
+  /* Style for form inputs and textarea */
+  .contactForm form input,
+  .contactForm form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-.contactForm form textarea {
+  }
+  
+  /* Style for textarea */
+  .contactForm form textarea {
     height: 150px;
-}
-
-.contactInfo ul {
+  }
+  
+  /* Style for error messages */
+  .contactForm form .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+  }
+  
+  /* Style for contact information list */
+  .contactInfo ul {
     list-style-position: inside; /* Align bullet points inside the list items */
-}
-
-.contactInfo li {
+  }
+  
+  /* Style for contact information list items */
+  .contactInfo li {
     text-align: left; /* Left-align the text */
-}
+  }

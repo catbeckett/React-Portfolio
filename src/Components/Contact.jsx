@@ -1,10 +1,14 @@
+// Import React and necessary dependencies
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './ContactForm.css'; // Import the CSS file for styling
 
+// Define the Contact component
 function Contact() {
+  // Initialize useForm hook
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  // Handle form submission
   const onSubmit = async (data) => {
     try {
       const response = await fetch('http://localhost:3000/api/contact', {
@@ -18,13 +22,14 @@ function Contact() {
       if (response.ok) {
         console.log('Form submitted successfully!');
       } else {
-        console.error('Failed to submit form:', response.statusText);
+        console.error('Failed to submit form:', response.status, response.statusText);
       }
     } catch (error) {
       console.error('Error:', error.message);
     }
   };
 
+  // Return JSX for Contact component
   return (
     <div className="contactPage">
       <h1>Contact Me</h1>
@@ -41,15 +46,15 @@ function Contact() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" {...register("name", { required: true })} />
-          {errors.name && <span>Name is required</span>}
+          {errors.name && <span className="error">Name is required</span>}
           
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" {...register("email", { required: true })} />
-          {errors.email && <span>Email is required</span>}
+          {errors.email && <span className="error">Email is required</span>}
 
           <label htmlFor="message">Message:</label>
           <textarea id="message" {...register("message", { required: true })}></textarea>
-          {errors.message && <span>Message is required</span>}
+          {errors.message && <span className="error">Message is required</span>}
           
           <button type="submit">Submit</button>
         </form>
@@ -58,4 +63,5 @@ function Contact() {
   );
 }
 
+// Export the Contact component
 export default Contact;
