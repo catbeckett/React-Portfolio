@@ -1,6 +1,7 @@
 // Import React and necessary dependencies
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import axios from 'axios'; // Import Axios
 import './ContactForm.css'; // Import the CSS file for styling
 
 // Define the Contact component
@@ -11,18 +12,12 @@ function Contact() {
   // Handle form submission
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('http://localhost:3000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await axios.post('http://localhost:3000/api/contact', data); // Use Axios to make POST request
 
-      if (response.ok) {
+      if (response.status === 200) {
         console.log('Form submitted successfully!');
       } else {
-        console.error('Failed to submit form:', response.status, response.statusText);
+        console.error('Failed to submit form:', response.statusText);
       }
     } catch (error) {
       console.error('Error:', error.message);
