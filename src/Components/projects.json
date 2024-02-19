@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Digital Nomad",
+        "live_app_url": "https://filipkotanski.github.io/Digital-Nomad-App/index.html",
+        "repository_url": "https://github.com/catbeckett/Digital-Nomad-App",
+        "image": "src/assets/Project3DN.png"
+    },
+    {
+        "id": 2,
+        "title": "Weather App",
+        "live_app_url": "https://catbeckett.github.io/Weather-Dashboard/",
+        "repository_url": "https://github.com/catbeckett/Weather-Dashboard",
+        "image": "src/assets/Project2WD.png"
+    },
+    {
+        "id": 3,
+        "title": "Workday Scheduler",
+        "live_app_url": " https://catbeckett.github.io/Daily-Planner-App/",
+        "repository_url": "https://github.com/catbeckett/Daily-Planner-App",
+        "image": "src/assets/ProjectWP.png"
+    },
+    {
+        "id": 4,
+        "title": "Coding Quiz",
+        "live_app_url": "https://catbeckett.github.io/Coding-Quiz/",
+        "repository_url": "https://github.com/catbeckett/Coding-Quiz",
+        "image": "src/assets/Screenshot-CDQ-1.png"
+    },
+    {
+        "id": 5,
+        "title": "Password Generator",
+        "live_app_url": "https://catbeckett.github.io/PasswordGenerator/",
+        "repository_url": "https://github.com/catbeckett/PasswordGenerator",
+        "image": "src/assets/Screenshot-PG-1.png"
+    },
+    {
+        "id": 6,
+        "title": "Portfolio",
+        "live_app_url": "https://catbeckett.github.io/Bootstrap-Portfolio/",
+        "repository_url": "https://github.com/catbeckett/Bootstrap-Portfolio",
+        "image": "src/assets/Screenshot-deployedwebportfolio.png"
+    }
+]
