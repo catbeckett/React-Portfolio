@@ -20,13 +20,14 @@ app.post('/api/contact', cors(), (req, res) => {
 });
 
 // Serve JavaScript files with the correct MIME type
-app.use(express.static(path.join(__dirname, 'public'), {
-  setHeaders: (res, path, stat) => {
-    if (path.endsWith('.jsx')) {
-      res.set('Content-Type', 'application/javascript');
-    }
-  },
-}));
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use((req, res, next) => {
+  if (req.originalUrl.endsWith('.jsx')) {
+    res.set('Content-Type', 'application/javascript');
+  }
+  next();
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
