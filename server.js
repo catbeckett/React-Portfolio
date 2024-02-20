@@ -27,10 +27,11 @@ app.post('/api/contact', cors(), (req, res) => {
 app.use(express.static(path.join(__dirname, 'public'), {
   setHeaders: (res, path, stat) => {
     if (path.endsWith('.jsx')) {
-      res.set('Content-Type', 'application/javascript');
+      res.set('Content-Type', 'text/javascript'); // Correct MIME type
     }
   },
 }));
+
 
 
 app.listen(PORT, () => {
