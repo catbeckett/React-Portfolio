@@ -66,7 +66,7 @@ To run the project locally, follow these steps:
 5. Open the application in your browser:
 
     ```bash
-    http://localhost:3000
+    https://catbeckett.github.io/React-Portfolio/
     ```
 
 ## Technologies Used
