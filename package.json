@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "homepage": "https://catbeckett.github.io/React-Portfolio/",
   "type": "module",
+  "predeploy": "npm run build",
+"deploy": "gh-pages -d build",
   "scripts": {
     "dev": "vite",
     "build": "vite build --base ./",
