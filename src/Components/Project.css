@@ -1,39 +1,36 @@
 .card {
-    background-color: #ffffff;
+    background-color: rgba(128, 128, 128, 0.2); /* Grey with 20% opacity */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(50, 50, 50, 0.8);
     padding: 20px;
     margin-bottom: 20px;
-    display: grid; /* Add grid display */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Adjust the gap between items */
-    text-align: left; /* Left-align the text */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
 }
 
 .card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.card h2 {
-    font-size: 20px; /* Reduce font size for project title */
-    margin-bottom: 10px;
-}
-
 .card p {
     font-size: 10px; /* Reduce font size for project description */
-    color: #555555;
+    color: rgba(50, 50, 50, 0.8);
 }
 
 .card a {
-    font-size: 16px; /* Reduce font size for links */
-    padding: 4px 8px; /* Reduce padding around links */
-    color: #646cff; /* Adjust link color */
-    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    padding: 4px 8px;
+    color: #38f0fd; /* Ice blue color */
+    text-decoration: none;
+    display: block; /* Change links to block elements */
 }
 
 .card a:hover {
-    color: #535bf2; /* Adjust link color on hover */
+    color: #535bf2; 
 }
+
 
 .img-container {
     max-width: 100%; /* Ensure images don't exceed their container */
@@ -50,4 +47,15 @@
     height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
     object-fit: cover; /* Ensure the image fills its container while preserving aspect ratio */
     border-radius: 8px; /* Optional: Add border-radius to match card's border-radius */
+}
+
+.card ul {
+    list-style: none; /* Remove default list-style */
+    padding-left: 20px; /* Add padding to mimic bullet points */
+}
+
+.card ul li::before {
+    display: inline-block;
+    width: 1em; /* Adjust spacing between bullet point and text */
+    margin-left: -1em; /* Adjust spacing between bullet point and text */
 }

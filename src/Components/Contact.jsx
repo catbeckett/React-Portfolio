@@ -1,7 +1,9 @@
+// Contact.jsx
 // Import React and necessary dependencies
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios'; // Import Axios
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import './ContactForm.css'; // Import the CSS file for styling
 
 // Define the Contact component
@@ -27,32 +29,35 @@ function Contact() {
   // Return JSX for Contact component
   return (
     <div className="contactPage">
-      <h1>Contact Me</h1>
-      <div className="contactInfo">
-        <ul>
-          <li><a href="https://github.com/catbeckett">GitHub Profile</a></li>
-          <li><a href="https://www.linkedin.com/in/catherinebeckett11">LinkedIn Page</a></li>
-          <li>Email: catejb89@gmail.com</li>
-          <li><a href="https://drive.google.com/file/d/1U3m45sVzXdq--fsc7Q0hcDZH4u5fFWow/view?usp=drive_link">PDF version of my resume</a></li>
-        </ul>
-      </div>
-      <div className="contactForm">
-        <h2>Contact Form</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" {...register("name", { required: true })} />
-          {errors.name && <span className="error">Name is required</span>}
-          
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" {...register("email", { required: true })} />
-          {errors.email && <span className="error">Email is required</span>}
+      <div className="text-container">
+        <h1>Contact Me</h1>
+        <div className="contactInfo">
+          <ul>
+            <li><a href="https://github.com/catbeckett">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/catherinebeckett11">LinkedIn Page</a></li>
+            <li>Email: catejb89@gmail.com</li>
+            {/* Replace the existing resume link with the new Link component */}
+            <li><Link to="https://drive.google.com/file/d/1U3m45sVzXdq--fsc7Q0hcDZH4u5fFWow/view?usp=drive_link">PDF version of my resume</Link></li>
+          </ul>
+        </div>
+        <div className="contactForm">
+          <h2>Contact Form</h2>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" {...register("name", { required: true })} />
+            {errors.name && <span className="error">Name is required</span>}
+            
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" {...register("email", { required: true })} />
+            {errors.email && <span className="error">Email is required</span>}
 
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" {...register("message", { required: true })}></textarea>
-          {errors.message && <span className="error">Message is required</span>}
-          
-          <button type="submit">Submit</button>
-        </form>
+            <label htmlFor="message">Message:</label>
+            <textarea id="message" {...register("message", { required: true })}></textarea>
+            {errors.message && <span className="error">Message is required</span>}
+            
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
   );

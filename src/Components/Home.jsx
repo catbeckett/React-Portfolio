@@ -1,24 +1,22 @@
+// Home.jsx
 import React from 'react';
-import catBeckettPhoto from '../assets/portfolioplacehoder.jpeg';
+import catBeckettPhoto from '../assets/cbhs.png';
 
 function Home() {
     return (
-        <div>
-            <h1>Cat Beckett</h1>
-            <img src={catBeckettPhoto} alt="Cat Beckett" style={{ width: '200px', height: 'auto' }} />
-            {/* Adjust the width and height values as needed */}
+        <div className="text-container">
             <p>
             Welcome to my portfolio!
+           </p>
+            <h1>Cat Beckett</h1>
+            <img src={catBeckettPhoto} alt="Cat Beckett" style={{ width: '200px', height: 'auto' }} />
+            <p>
+            Fostering innovation in the cultural sector by harmoniously
             </p>
             <p>
-            London-based Digital Product Manager with 8 years of experience in crafting and managing 
+            blending creative content production with digital solutions.
             </p>
-            <p>
-            digital solutions for the arts and cultural sector, merging content production skills with proficiency 
-            </p>
-            <p> 
-            in front-end web development to lead impactful projects and elevate cultural engagement.
-            </p>
+
 
         </div>
     );

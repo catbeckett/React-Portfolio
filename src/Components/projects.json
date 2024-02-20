@@ -36,7 +36,7 @@
     },
     {
         "id": 6,
-        "title": "Portfolio",
+        "title": "Bootstrap Portfolio",
         "live_app_url": "https://catbeckett.github.io/Bootstrap-Portfolio/",
         "repository_url": "https://github.com/catbeckett/Bootstrap-Portfolio",
         "image": "src/assets/Screenshot-deployedwebportfolio.png"

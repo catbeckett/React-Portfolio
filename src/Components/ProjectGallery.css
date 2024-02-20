@@ -9,19 +9,17 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-
-.project-gallery .card {
-    background-color: #333333;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the card */
+    background-color: rgba(50, 50, 50, 0.8);
     color: #fff;
 }
 
-
 .project-gallery .card h2 {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
-
 
 .project-gallery .img-container {
     flex: 1;
