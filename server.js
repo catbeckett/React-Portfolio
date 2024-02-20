@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Use cors middleware with options to allow requests from localhost:5173
 app.use(cors({
-  origin: 'http://localhost:5175',
+  origin: 'http://localhost:5176',
 }));
 
 // Define options route for the contact form to enable preflight requests
