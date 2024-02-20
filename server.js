@@ -21,7 +21,7 @@ app.post('/api/contact', cors(), (req, res) => {
 });
 
 // Serve JavaScript files with the correct MIME type
-app.use(express.static(path.join(__dirname, 'public'), {
+app.use(express.static(path.join(__dirname, 'dist'), {
   setHeaders: (res, filePath) => {
     const extname = path.extname(filePath);
     if (extname === '.js' || extname === '.jsx') {
