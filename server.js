@@ -1,17 +1,16 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors'; // Import the cors module
+import path from 'path'; // Import the path module
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Use the environment port or default to 3000
 
 app.use(express.json());
 app.use(bodyParser.json());
 
-// Use cors middleware with options to allow requests from localhost:5173
-app.use(cors({
-  origin: 'http://localhost:5176',
-}));
+// Allow requests from any origin
+app.use(cors());
 
 // Define options route for the contact form to enable preflight requests
 app.options('/api/contact', cors());
@@ -23,6 +22,17 @@ app.post('/api/contact', cors(), (req, res) => {
   console.log('Received form data:', formData);
   res.json({ message: 'Form submitted successfully!' });
 });
+
+// Serve JavaScript files with the correct MIME type
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res, path, stat) => {
+    if (path.endsWith('.js')) {
+      res.set('Content-Type', 'application/javascript');
+    }
+  },
+}));
+
+// Other middleware and route definitions...
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
