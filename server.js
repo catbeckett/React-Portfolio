@@ -23,14 +23,8 @@ app.post('/api/contact', cors(), (req, res) => {
   res.json({ message: 'Form submitted successfully!' });
 });
 
-// Serve JavaScript files with the correct MIME type
-app.use(express.static(path.join(__dirname, 'public'), {
-  setHeaders: (res, path, stat) => {
-    if (path.endsWith('.js')) {
-      res.set('Content-Type', 'application/javascript');
-    }
-  },
-}));
+// Serve the static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Other middleware and route definitions...
 
