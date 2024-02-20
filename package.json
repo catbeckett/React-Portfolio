@@ -2,7 +2,7 @@
   "name": "reactportfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://catbeckett.github.io/React-Portfolio/",
+  "homepage": "./",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
-import Header from './Components/Header';
+import '../src/App.css';
+import Header from '../src/Components/Header.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home';
-import ProjectGallery from './Components/ProjectGallery';
-import Contact from './Components/Contact';
+import Home from '../src/Components/Home.jsx';
+import ProjectGallery from '../src/Components/ProjectGallery.jsx';
+import Contact from '../src/Components/Contact.jsx';
 
 function App() {
   return (
