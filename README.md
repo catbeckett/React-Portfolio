@@ -1,6 +1,6 @@
 # React Portfolio Site
 
-This project is a portfolio website developed using React, showcasing various projects and information about myself and my Front-End Development skills. Please see the deployed page here:
+This project is a portfolio website developed using React, showcasing various projects and information about myself and my Front-End Development skills. Please see the deployed page here: https://catbeckett.github.io/React-Portfolio/
 
 ## Design
 
