@@ -4,7 +4,7 @@
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.87); /* White text color */
   background-color: #242424; /* Dark background color */
-  background-image: url('src/assets/SAAM-1950.2.1_1.jpg'); /* Background image */
+  background-image: url('../public/SAAM-1950.2.1_1.jpg'); /* Background image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

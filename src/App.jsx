@@ -1,10 +1,10 @@
 import React from 'react';
-import '../src/App.css';
-import Header from '../src/Components/Header.jsx';
+import './App.css';
+import Header from './Components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../src/Components/Home.jsx';
-import ProjectGallery from '../src/Components/ProjectGallery.jsx';
-import Contact from '../src/Components/Contact.jsx';
+import Home from './Components/Home';
+import About from './Components/About';
+import ProjectGallery from './Components/ProjectGallery';
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
         <Route path="/Projects" element={<ProjectGallery />} />
-        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </Router>
   );
