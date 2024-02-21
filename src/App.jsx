@@ -8,7 +8,7 @@ import Contact from './Components/Contact';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/React-Portfolio">
       <Header />
       <Routes>
         <Route path="src/Components/Home.jsx" element={<Home />} />
