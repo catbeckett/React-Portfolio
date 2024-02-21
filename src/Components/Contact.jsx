@@ -1,19 +1,15 @@
-// Contact.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './ContactForm.css';
 
-// Define the Contact component
 function Contact() {
-  // Initialize useForm hook
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  // Handle form submission
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/contact', data); // Use Axios to make POST request
+      const response = await axios.post('/api/contact', data); // Updated endpoint URL
 
       if (response.status === 200) {
         console.log('Form submitted successfully!');
@@ -25,7 +21,6 @@ function Contact() {
     }
   };
 
-  // Return JSX for Contact component
   return (
     <div className="contactPage">
       <div className="text-container">
@@ -61,5 +56,4 @@ function Contact() {
   );
 }
 
-// Export the Contact component
 export default Contact;
