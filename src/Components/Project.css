@@ -1,5 +1,5 @@
 .card {
-    background-color: rgba(128, 128, 128, 0.2); /* Grey with 20% opacity */
+    background-color: rgba(128, 128, 128, 0.2);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(50, 50, 50, 0.8);
     padding: 20px;
@@ -15,16 +15,16 @@
 }
 
 .card p {
-    font-size: 10px; /* Reduce font size for project description */
+    font-size: 10px;
     color: rgba(50, 50, 50, 0.8);
 }
 
 .card a {
     font-size: 18px;
     padding: 4px 8px;
-    color: #38f0fd; /* Ice blue color */
+    color: #38f0fd;
     text-decoration: none;
-    display: block; /* Change links to block elements */
+    display: block;
 }
 
 .card a:hover {
@@ -33,29 +33,29 @@
 
 
 .img-container {
-    max-width: 100%; /* Ensure images don't exceed their container */
+    max-width: 100%;
     height: auto;
-    display: flex; /* Use flexbox to center the image vertically */
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-container img {
-    max-width: 100%; /* Ensure the image width doesn't exceed its container */
-    max-height: 100%; /* Ensure the image height doesn't exceed its container */
-    width: auto; /* Allow the image to adjust its width while maintaining aspect ratio */
-    height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
-    object-fit: cover; /* Ensure the image fills its container while preserving aspect ratio */
-    border-radius: 8px; /* Optional: Add border-radius to match card's border-radius */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .card ul {
-    list-style: none; /* Remove default list-style */
-    padding-left: 20px; /* Add padding to mimic bullet points */
+    list-style: none;
+    padding-left: 20px;
 }
 
 .card ul li::before {
     display: inline-block;
-    width: 1em; /* Adjust spacing between bullet point and text */
-    margin-left: -1em; /* Adjust spacing between bullet point and text */
+    width: 1em;
+    margin-left: -1em;
 }

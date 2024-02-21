@@ -1,10 +1,9 @@
 // Contact.jsx
-// Import React and necessary dependencies
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios'; // Import Axios
-import { Link } from 'react-router-dom'; // Import Link from React Router
-import './ContactForm.css'; // Import the CSS file for styling
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './ContactForm.css';
 
 // Define the Contact component
 function Contact() {
@@ -36,7 +35,6 @@ function Contact() {
             <li><a href="https://github.com/catbeckett">GitHub Profile</a></li>
             <li><a href="https://www.linkedin.com/in/catherinebeckett11">LinkedIn Page</a></li>
             <li>Email: catejb89@gmail.com</li>
-            {/* Replace the existing resume link with the new Link component */}
             <li><Link to="https://drive.google.com/file/d/1U3m45sVzXdq--fsc7Q0hcDZH4u5fFWow/view?usp=drive_link">PDF version of my resume</Link></li>
           </ul>
         </div>

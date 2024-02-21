@@ -11,9 +11,9 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Projects" element={<ProjectGallery />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="src/Components/Home.jsx" element={<Home />} />
+        <Route path="src/Components/Project.jsx" element={<ProjectGallery />} />
+        <Route path="src/Components/Contact.jsx" element={<Contact />} />
       </Routes>
     </Router>
   );

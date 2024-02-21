@@ -7,7 +7,7 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    font-weight: bold; /* Apply bold font weight to the header */
+    font-weight: bold;
 }
 
 .navbar {
@@ -30,5 +30,5 @@ header {
 .nav-item a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold; /* Apply bold font weight to the navigation links */
+    font-weight: bold;
 }
