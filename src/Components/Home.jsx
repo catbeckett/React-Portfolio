@@ -1,6 +1,6 @@
 // Home.jsx
 import React from 'react';
-import catBeckettPhoto from '/src/assets/cbhs.png';
+import catBeckettPhoto from '../../public/images/cbhs.png';
 
 function Home() {
     return (

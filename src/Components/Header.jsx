@@ -6,9 +6,9 @@ function Header() {
         <header>
             <nav className="navbar">
                 <ul className="nav-list">
-                    <li className="nav-item"><a href="/">Home</a></li>
-                    <li className="nav-item"><a href="Project.jsx">Projects</a></li>
-                    <li className="nav-item"><a href="Contact.jsx">Contact</a></li>
+                    <li className="nav-item"><a href="./">Home</a></li>
+                    <li className="nav-item"><a href="Projects">Projects</a></li>
+                    <li className="nav-item"><a href="Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
