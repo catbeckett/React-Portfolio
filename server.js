@@ -1,4 +1,3 @@
-// server.js
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -39,6 +38,11 @@ app.use(express.static(path.join(__dirname, 'dist'), {
     }
   },
 }));
+
+// This route serves your React frontend
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
