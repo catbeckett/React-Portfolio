@@ -14,10 +14,18 @@ app.use(cors());
 app.options('/api/contact', cors());
 
 app.post('/api/contact', cors(), (req, res) => {
+  // Allow requests only from specific origins (replace '*' with your frontend URL)
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
   console.log('Received request from origin:', req.get('origin'));
   const formData = req.body;
   console.log('Received form data:', formData);
-  res.json({ message: 'Form submitted successfully!' });
+
+  // Simulate a delay (for testing purposes)
+  setTimeout(() => {
+    // Respond with success message and status code 200
+    res.status(200).json({ message: 'Form submitted successfully!' });
+  }, 1000); // 1 second delay
 });
 
 // Serve JavaScript files with the correct MIME type
