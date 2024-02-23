@@ -11,21 +11,23 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
-app.options('/api/contact', cors());
+app.post('/api/contact', (req, res) => {
+  try {
+    // Handle CORS preflight request
+    if (req.method === 'OPTIONS') {
+      res.sendStatus(200);
+      return;
+    }
 
-app.post('/api/contact', cors(), (req, res) => {
-  // Allow requests only from specific origins (replace '*' with your frontend URL)
-  res.setHeader('Access-Control-Allow-Origin', '*');
-
-  console.log('Received request from origin:', req.get('origin'));
-  const formData = req.body;
-  console.log('Received form data:', formData);
-
-  // Simulate a delay (for testing purposes)
-  setTimeout(() => {
-    // Respond with success message and status code 200
-    res.status(200).json({ message: 'Form submitted successfully!' });
-  }, 1000); // 1 second delay
+    // Simulate a delay (for testing purposes)
+    setTimeout(() => {
+      // Respond with success message and status code 200
+      res.status(200).json({ message: 'Form submitted successfully!' });
+    }, 1000); // 1 second delay
+  } catch (error) {
+    console.error('Error:', error.message);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 // Serve JavaScript files with the correct MIME type
