@@ -8,7 +8,7 @@ function Contact() {
   const onSubmit = async (data) => {
     try {
       // Send form data to Formspree endpoint
-      const response = await fetch('https://formspree.io/your-email-here', {
+      const response = await fetch('https://formspree.io/f/mnqevnzp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
